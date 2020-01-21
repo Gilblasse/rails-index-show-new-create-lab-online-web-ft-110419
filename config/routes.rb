@@ -2,9 +2,8 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
-  resource :coupons
-  resources :products do
-      member do
+  resources :coupons do
+      coupon do
         get 'short'
         post 'toggle'
       end
