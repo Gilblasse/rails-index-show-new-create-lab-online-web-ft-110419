@@ -12,7 +12,7 @@ class CouponsController < ApplicationController
   end
   
   def create
-    Coupon.create(params)
+    Coupon.create(params[:store])
   end
   
   
