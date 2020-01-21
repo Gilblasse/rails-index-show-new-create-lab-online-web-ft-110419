@@ -12,7 +12,7 @@ class CouponsController < ApplicationController
   end
   
   def create
-    
+    byebug
     coupon = Coupon.create(params[:store])
     redirect_to coupon_path(coupon)
   end
