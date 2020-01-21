@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   
   resource :coupons
+  resources :products do
+      member do
+        get 'short'
+        post 'toggle'
+      end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
