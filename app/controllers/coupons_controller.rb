@@ -12,7 +12,8 @@ class CouponsController < ApplicationController
   end
   
   def create
-    store_attributes = params.dig(:coupon)
+    ActionController::Parameters.permit_all_parameters = true
+    store_attributes = params[:coupon]
     # store_attributes = params[:coupon].map{|k,v| [k,v]}.to_h
     coupon = Coupon.create(store_attributes)
     redirect_to coupon_path(coupon)
