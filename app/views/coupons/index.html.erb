@@ -1,6 +1,6 @@
 <h1>Index Page</h1>
 
 <%@coupons.each do |coupon|%>
-  <%=coupon.store%>
+  <a href="coupons/<%=coupon.id%>"><%=coupon.store%></a>
   <br>
 <%end%>
