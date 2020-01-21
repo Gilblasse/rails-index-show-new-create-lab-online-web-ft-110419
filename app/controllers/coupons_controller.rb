@@ -13,7 +13,8 @@ class CouponsController < ApplicationController
   
   def create
     byebug
-    coupon = Coupon.create(params[:store])
+    store_attributes = params[:store].map{|k,v| [k,v]}.to_h
+    coupon = Coupon.create(store_attributes)
     redirect_to coupon_path(coupon)
   end
   
